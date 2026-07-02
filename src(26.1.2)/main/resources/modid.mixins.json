@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "io.github.kabanfriends.forcegl30.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"GlCommandEncoderMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
