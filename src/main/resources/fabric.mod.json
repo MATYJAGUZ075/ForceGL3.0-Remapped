@@ -6,7 +6,7 @@
 	"description": "OpenGL 3.0 compatibility for Minecraft 26.1.2 and 26.2.",
 	"authors": [
 		"MATYJAGUZ075",
-		"coredex-source (original ForceGL3.0)"
+		"coredex-source"
 	],
 	"contact": {
 		"homepage": "https://github.com/MATYJAGUZ075/ForceGL3.0-Remapped",
@@ -18,7 +18,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"io.github.kabanfriends.forcegl30.ForceGL30"
+			"io.github.kabanfriends.forcegl30.ForceGL30Mod"
 		]
 	},
 	"mixins": [
