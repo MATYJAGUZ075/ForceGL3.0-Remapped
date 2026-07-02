@@ -9,6 +9,11 @@ OpenGL 3.0 compatibility for Minecraft 26.1.2 and 26.2
 - Allows Minecraft to run on **OpenGL 3.0** hardware.
 - Original project by **coredex-source**.
 
+> **Note**
+>
+> At the moment, only the **Minecraft 26.2** build is available.
+> The **26.1.2** build will be published in the next few days.
+
 ---
 
 ## Screenshots
@@ -33,7 +38,26 @@ Before opening an issue, please verify that Minecraft is failing with **GLFW err
 
 This mod is only intended to solve **GLFW error 65542**, which is caused by Minecraft requiring OpenGL 3.2 on hardware that only supports OpenGL 3.0.
 
-If you receive **any other GLFW error** (for example, **65543** or another number), it is a different problem and is currently **outside the scope of this mod**.
+If you receive **any other GLFW error** (for example **65543** or another number), it is a different problem and is currently **outside the scope of this mod**.
+
+---
+
+## Recommended Settings
+
+> **Warning**
+>
+> Older OpenGL 3.0 GPUs may experience rendering issues or crashes with high graphics settings.
+
+For the best compatibility, it is recommended to:
+
+- Set **Graphics** to **Fast**.
+- Disable **Clouds**.
+- Disable **Entity Shadows**.
+- Use the **minimum Render Distance** your hardware can comfortably handle.
+- Disable any resource packs or shaders.
+- Keep graphics settings as low as possible.
+
+These settings greatly improve stability on older Intel HD Graphics and similar GPUs.
 
 ---
 
@@ -87,8 +111,8 @@ ForceGL3.0-Remapped restores compatibility by forcing an OpenGL 3.0 context and 
 
 | Minecraft | Status |
 |------------|--------|
-| 26.1.2 | ✅ |
-| 26.2 | ✅ |
+| 26.1.2 | ✅ (Coming soon) |
+| 26.2 | ✅ Available |
 | Newer snapshots | ⚠️ Not guaranteed |
 
 ---
@@ -100,6 +124,21 @@ Yes.
 This mod has been successfully tested on real OpenGL 3.0 hardware.
 
 However, Minecraft officially requires OpenGL 3.2, so some future Minecraft versions, snapshots, mods or resource packs may not work correctly.
+
+---
+
+## Bug Reports
+
+Found a bug?
+
+Please open an issue on GitHub and include:
+
+- Your Minecraft version.
+- Your GPU model.
+- Your operating system.
+- The complete **latest.log** or crash report.
+
+Bug reports **without logs** are very difficult to investigate.
 
 ---
 
