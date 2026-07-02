@@ -34,11 +34,11 @@ OpenGL 3.0 compatibility for Minecraft 26.1.2 and 26.2
 
 ## It doesn't work!
 
-Before opening an issue, please verify that Minecraft is failing with **GLFW error 65542**.
+Before opening an issue, make sure Minecraft is failing because your graphics driver does **not support OpenGL 3.2/3.3**, even though it supports **OpenGL 3.0**.
 
-This mod is only intended to solve **GLFW error 65542**, which is caused by Minecraft requiring OpenGL 3.2 on hardware that only supports OpenGL 3.0.
+ForceGL3.0-Remapped is designed **only** for this compatibility issue.
 
-If you receive **any other GLFW error** (for example **65543** or another number), it is a different problem and is currently **outside the scope of this mod**.
+It does **not** fix missing graphics drivers, corrupted driver installations, or other unrelated GLFW/OpenGL errors.
 
 ---
 
