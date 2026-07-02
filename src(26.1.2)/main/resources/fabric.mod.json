@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "forcegl30remapped",
+	"version": "${version}",
+	"name": "ForceGL3.0-Remapped",
+	"description": "OpenGL 3.0 compatibility for Minecraft 26.1.2 and 26.2.",
+	"authors": [
+    "MATYJAGUZ075",
+		"coredex-source"
+	],
+	"contact": {
+	  "homepage": "https://github.com/MATYJAGUZ075/ForceGL3.0-Remapped",
+		"sources": "https://github.com/MATYJAGUZ075/ForceGL3.0-Remapped",
+		"issues": "https://github.com/MATYJAGUZ075/ForceGL3.0-Remapped/issues"
+	},
+	"license": "MIT",
+	"icon": "assets/modid/icon.png",
+	"environment": "*",  
+  "entrypoints": {
+		"main": [
+			"io.github.kabanfriends.forcegl30.ForceGL30Mod"
+		]
+	},
+	"mixins": [
+		"modid.mixins.json",
+		{
+			"config": "modid.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
