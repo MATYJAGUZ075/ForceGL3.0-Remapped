@@ -3,9 +3,12 @@
 	"package": "io.github.kabanfriends.forcegl30.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"client": [
-		"GlCommandEncoderMixin"
+		"GL30Mixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
 	}
 }
