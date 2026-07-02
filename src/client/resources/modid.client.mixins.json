@@ -1,0 +1,18 @@
+{
+	"required": true,
+	"package": "io.github.kabanfriends.forcegl30.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"Gl30Mixin",
+		"GlCommandEncoderMixin",
+		"GlDeviceMixin",
+		"VertexArrayCacheEmulatedMixin",
+		"GL33CDebugMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
