@@ -9,11 +9,6 @@ OpenGL 3.0 compatibility for Minecraft 26.1.2 and 26.2
 - Allows Minecraft to run on **OpenGL 3.0** hardware.
 - Original project by **coredex-source**.
 
-> **Note**
->
-> At the moment, only the **Minecraft 26.2** build is available.
-> The **26.1.2** build will be published in the next few days.
-
 ---
 
 ## Screenshots
@@ -103,7 +98,7 @@ ForceGL3.0-Remapped restores compatibility by forcing an OpenGL 3.0 context and 
 
 | GPU | OpenGL | Minecraft | Status |
 |------|---------|-----------|--------|
-| Intel HD Graphics 3000 | 3.0 | 26.2 | ✅ Working |
+| Intel HD Graphics 3000 | 3.0 | 26.1.2/26.2 | ✅ Working |
 
 ---
 
@@ -111,7 +106,7 @@ ForceGL3.0-Remapped restores compatibility by forcing an OpenGL 3.0 context and 
 
 | Minecraft | Status |
 |------------|--------|
-| 26.1.2 | ✅ (Coming soon) |
+| 26.1.2 | ✅ (Available) |
 | 26.2 | ✅ Available |
 | Newer snapshots | ⚠️ Not guaranteed |
 
