@@ -13,6 +13,10 @@ OpenGL 3.0 compatibility for Minecraft 26.1.2 and 26.2
 
 ## Screenshots
 
+### OpenGL Error (that the mod fixes)
+
+![Main Menu](images/OpenGLError.png)
+
 ### Main Menu
 
 ![Main Menu](images/main_menu.png)
