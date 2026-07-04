@@ -22,8 +22,6 @@ public class Gl30Mixin {
     )
     private void forcegl30$windowHintOverride(int hint, int value) {
 
-        System.out.println("FORCEGL30 MIXIN FUNCIONANDO");
-
         HintOverride override = ForceGL30.GLFW_OVERRIDE_VALUES.get(hint);
 
         if (override != null) {
