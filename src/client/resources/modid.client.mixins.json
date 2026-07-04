@@ -7,7 +7,9 @@
 		"GlCommandEncoderMixin",
 		"GlDeviceMixin",
 		"VertexArrayCacheEmulatedMixin",
-		"GL33CDebugMixin"
+		"GlCommandEncoderSamplerMixin",
+		"GlCommandEncoderTextureMixin",
+		"GlCommandEncoderUniformMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
