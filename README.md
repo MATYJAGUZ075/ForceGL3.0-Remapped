@@ -1,29 +1,29 @@
 # ForceGL3.0-Remapped
 
-OpenGL 3.0 compatibility for Minecraft 26.1.2 and 26.2
+OpenGL 3.0 compatibility for Minecraft **26.1.2** and **26.2**.
 
-> A remapped and updated version of [ForceGL3.0](https://github.com/coredex-source/ForceGL3.0).
+> An unofficial maintenance fork of [ForceGL3.0](https://github.com/coredex-source/ForceGL3.0).
 
-- Supports **Minecraft 26.1.2** and **26.2**.
-- Designed for **Fabric**.
-- Allows Minecraft to run on **OpenGL 3.0** hardware.
-- Original project by **coredex-source**.
+ForceGL3.0-Remapped continues development of the original ForceGL3.0 project for newer Minecraft versions.
+
+While preserving the original goal of allowing Minecraft to run on hardware limited to **OpenGL 3.0**, this fork required adapting the mod to Minecraft **26.1.2** and **26.2**, updating Mixins, remapping the project to the latest mappings, and implementing additional compatibility changes for Mojang's updated rendering backend.
+
+## Features
+
+- ✅ Supports **Minecraft 26.1.2**
+- ✅ Supports **Minecraft 26.2**
+- ✅ Fabric Loader
+- ✅ Allows Minecraft to run on OpenGL 3.0 hardware
+- ✅ Updated rendering compatibility for Minecraft 26.x
+- ✅ Improved compatibility with Intel HD Graphics and similar legacy GPUs
 
 ---
 
 ## Screenshots
 
-### OpenGL Error (that the mod fixes)
+### OpenGL Error (fixed by the mod)
 
-![Main Menu](images/OpenGLError.png)
-
-### Main Menu
-
-![Main Menu](images/main_menu.png)
-
-### In-game
-
-![Gameplay](images/gameplay.png)
+![OpenGL Error](images/OpenGLError.png)
 
 ### Hardware Information
 
@@ -31,13 +31,15 @@ OpenGL 3.0 compatibility for Minecraft 26.1.2 and 26.2
 
 ---
 
-## It doesn't work!
+## What does this mod do?
 
-Before opening an issue, make sure Minecraft is failing because your graphics driver does **not support OpenGL 3.2/3.3**, even though it supports **OpenGL 3.0**.
+Since Minecraft 1.17, Mojang officially requires **OpenGL 3.2**.
 
-ForceGL3.0-Remapped is designed **only** for this compatibility issue.
+Many older graphics cards only support **OpenGL 3.0**, causing Minecraft to fail before reaching the main menu.
 
-It does **not** fix missing graphics drivers, corrupted driver installations, or other unrelated GLFW/OpenGL errors.
+ForceGL3.0-Remapped modifies the OpenGL context requested during startup, allowing Minecraft to initialize on supported OpenGL 3.0 hardware whenever possible.
+
+This project only addresses the OpenGL version requirement. It is **not** intended to fix broken drivers, missing OpenGL support, or unrelated rendering issues.
 
 ---
 
@@ -45,56 +47,32 @@ It does **not** fix missing graphics drivers, corrupted driver installations, or
 
 > **Warning**
 >
-> Older OpenGL 3.0 GPUs may experience rendering issues or crashes with high graphics settings.
+> OpenGL 3.0 hardware may become unstable when using demanding graphics settings.
 
-For the best compatibility, it is recommended to:
+For the best experience, it is recommended to:
 
-- Set **Graphics** to **Fast**.
-- Disable **Clouds**.
-- Disable **Entity Shadows**.
-- Use the **minimum Render Distance** your hardware can comfortably handle.
-- Disable any resource packs or shaders.
-- Keep graphics settings as low as possible.
+- Set **Graphics** to **Fast**
+- Disable **Clouds**
+- Disable **Entity Shadows**
+- Use the lowest render distance your hardware can comfortably handle
+- Avoid shaders
+- Avoid heavy resource packs
 
-These settings greatly improve stability on older Intel HD Graphics and similar GPUs.
-
----
-
-## What's New?
-
-Compared to the original ForceGL3.0:
-
-- ✅ Ported to Minecraft **26.1.2**
-- ✅ Ported to Minecraft **26.2**
-- ✅ Updated to Mojang's new rendering backend
-- ✅ Updated Mixins
-- ✅ Added OpenGL compatibility fixes
-- ✅ Improved compatibility with Intel HD Graphics
+These settings greatly improve stability on older GPUs.
 
 ---
 
-## Fixes
+## Changes from the original ForceGL3.0
 
-- Fixes game not launching on OpenGL 3.0 GPUs.
-- Fixes several rendering calls introduced in Minecraft 26.x.
-- Allows modern Minecraft to run on legacy GPUs that only support OpenGL 3.0.
+This fork includes:
 
----
-
-## Why?
-
-Since Minecraft 1.17, Mojang requires **OpenGL 3.2**.
-
-Older GPUs such as:
-
-- Intel HD Graphics 3000
-- Intel HD Graphics 2000
-- Older AMD GPUs
-- Older NVIDIA GPUs
-
-only support **OpenGL 3.0**, preventing Minecraft from starting.
-
-ForceGL3.0-Remapped restores compatibility by forcing an OpenGL 3.0 context and adapting modern rendering calls.
+- Port to Minecraft **26.1.2**
+- Port to Minecraft **26.2**
+- Updated Mixins for Minecraft 26.x
+- Updated rendering compatibility
+- Additional compatibility layer for Minecraft 26.2
+- Updated project mappings
+- Various compatibility fixes and maintenance improvements
 
 ---
 
@@ -102,42 +80,23 @@ ForceGL3.0-Remapped restores compatibility by forcing an OpenGL 3.0 context and 
 
 | GPU | OpenGL | Minecraft | Status |
 |------|---------|-----------|--------|
-| Intel HD Graphics 3000 | 3.0 | 26.1.2/26.2 | ✅ Working |
+| Intel HD Graphics 3000 | 3.0 | 26.1.2 / 26.2 | ✅ Working |
 
----
-
-## Supported Versions
-
-| Minecraft | Status |
-|------------|--------|
-| 26.1.2 | ✅ (Available) |
-| 26.2 | ✅ Available |
-| Newer snapshots | ⚠️ Not guaranteed |
-
----
-
-## But does it work?
-
-Yes.
-
-This mod has been successfully tested on real OpenGL 3.0 hardware.
-
-However, Minecraft officially requires OpenGL 3.2, so some future Minecraft versions, snapshots, mods or resource packs may not work correctly.
+Additional hardware will be added as testing continues.
 
 ---
 
 ## Bug Reports
 
-Found a bug?
+If you encounter an issue, please open a GitHub Issue and include:
 
-Please open an issue on GitHub and include:
+- Minecraft version
+- GPU model
+- Operating system
+- Fabric Loader version
+- Complete **latest.log** or crash report
 
-- Your Minecraft version.
-- Your GPU model.
-- Your operating system.
-- The complete **latest.log** or crash report.
-
-Bug reports **without logs** are very difficult to investigate.
+Bug reports without logs are usually impossible to investigate.
 
 ---
 
@@ -147,37 +106,24 @@ Original project:
 
 https://github.com/coredex-source/ForceGL3.0
 
-This project is a fork/remap of ForceGL3.0 updated for Minecraft 26.1.2 and 26.2.
+ForceGL3.0-Remapped is an unofficial maintenance fork of ForceGL3.0.
 
-Additional work includes:
+Original implementation by **coredex-source**.
+
+Additional work by **MATYJAGUZ075**:
 
 - Port to Minecraft 26.1.2
 - Port to Minecraft 26.2
-- Updated rendering compatibility
-- Updated Mixins
-- OpenGL 3.0 compatibility improvements
-
-All credit for the original implementation goes to **coredex-source**.
-
----
-
-## Compiling
-
-```bash
-./gradlew build
-```
-
-The compiled mod will be located in:
-
-```
-build/libs/
-```
+- Rendering compatibility updates
+- Mixins updates
+- Compatibility layer improvements
+- Ongoing maintenance
 
 ---
 
 ## Have an older graphics card?
 
-If your GPU only supports **OpenGL 2.0**, use the original **ForceGL2.0** project instead:
+If your GPU only supports **OpenGL 2.0**, use the original **ForceGL2.0** project:
 
 https://github.com/coredex-source/ForceGL2.0-1.2x
 
@@ -185,6 +131,8 @@ https://github.com/coredex-source/ForceGL2.0-1.2x
 
 ## License
 
-This project is licensed under the **MIT License**.
+This project is licensed under the **GNU Lesser General Public License v3.0 (LGPL-3.0)**.
 
-See the LICENSE file for details.
+ForceGL3.0-Remapped is a fork of the original ForceGL3.0 project by **coredex-source** and continues to follow the original project's license.
+
+See the `LICENSE` file for the complete license text.
